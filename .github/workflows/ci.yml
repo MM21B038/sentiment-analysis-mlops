@@ -28,8 +28,3 @@ jobs:
         run: |
           dvc repro
           dvc push -r myremote
-
-      - name: Deploy with Docker
-        run: |
-          docker-compose build
-          docker-compose up -d
