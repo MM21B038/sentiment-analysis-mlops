@@ -9,8 +9,5 @@ dvc
 mlflow
 sentence-transformers
 xgboost
-<<<<<<< HEAD
 lightgbm
 catboost
-=======
->>>>>>> aa3ebbe3703ef71995718f9206663fee9eb1938a
