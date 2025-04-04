@@ -13,12 +13,11 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.10"
+          python-version: "3.12.2"
 
       - name: Install Dependencies
         run: |
           pip install -r requirements.txt
-          sudo apt-get install -y dvc  # If needed
 
       - name: Configure DVC
         run: |
@@ -29,8 +28,3 @@ jobs:
         run: |
           dvc repro
           dvc push -r myremote
-
-      - name: Deploy with Docker
-        run: |
-          docker-compose build
-          docker-compose up -d

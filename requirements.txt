@@ -1,16 +1,16 @@
 flask
 flask_cors
 emoji
-google-api-python-client  # Fetch YouTube comments
 pandas
 numpy
 scikit-learn
 nltk
 dvc
 mlflow
-requests
-gunicorn  # For production server
 sentence-transformers
 xgboost
+<<<<<<< HEAD
 lightgbm
 catboost
+=======
+>>>>>>> aa3ebbe3703ef71995718f9206663fee9eb1938a
