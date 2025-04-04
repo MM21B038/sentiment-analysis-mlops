@@ -64,22 +64,13 @@ stages:
       md5: e9d31e6ea2311ede6e578f94da6eeb69
       size: 2545
     outs:
-    - path: models/label_encoder.pkl
+    - path: models/encoder.pkl
       hash: md5
       md5: 4143fb07ab2eebeec507fbcd64b2262d
       size: 351
-    - path: models/xg_model.pkl
+    - path: models/model.pkl
       hash: md5
       md5: fed62fd9679f2bad9fd683038ed3fd71
       size: 1117072
   promote_model:
     cmd: python src/ml/promote_model.py
-    deps:
-    - path: models/label_encoder.pkl
-      hash: md5
-      md5: 4143fb07ab2eebeec507fbcd64b2262d
-      size: 351
-    - path: models/xg_model.pkl
-      hash: md5
-      md5: fed62fd9679f2bad9fd683038ed3fd71
-      size: 1117072

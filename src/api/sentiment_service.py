@@ -10,7 +10,7 @@ MODEL_NAME = "YouTube_Comment_Sentiment_Analysis"
 trans = CustomTextToVector()
 encoder = joblib.load("models/label_encoder.pkl")
 # Load the latest model from MLflow
-model = mlflow.xgboost.load_model(f"models:/{MODEL_NAME}/Production")
+model = mlflow.pyfunc.load_model(f"models:/{MODEL_NAME}/Production")
 
 def predict_sentiment(comment):
     vectors = trans.transform(comment)

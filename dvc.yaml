@@ -30,12 +30,9 @@ stages:
       - data/processed/features.csv
       - src/ml/train.py
     outs:
-      - models/xg_model.pkl
-      - models/label_encoder.pkl
+      - models/model.pkl
+      - models/encoder.pkl
 
   promote_model:
     cmd: python src/ml/promote_model.py
-    deps:
-      - models/xg_model.pkl
-      - models/label_encoder.pkl
       
