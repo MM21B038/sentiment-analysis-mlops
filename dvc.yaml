@@ -36,4 +36,7 @@ stages:
 
   promote_model:
     cmd: python src/ml/promote_model.py
+    deps:
+      - src/ml/promote_model.py
+      - params.yaml
       

@@ -78,3 +78,12 @@ stages:
       size: 80995233
   promote_model:
     cmd: python src/ml/promote_model.py
+    deps:
+    - path: params.yaml
+      hash: md5
+      md5: d085c3503384930bbaa9845059f84bb1
+      size: 342
+    - path: src/ml/promote_model.py
+      hash: md5
+      md5: 52baf582d3620da17d81c825292039eb
+      size: 2841
