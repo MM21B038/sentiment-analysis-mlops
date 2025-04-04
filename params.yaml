@@ -4,8 +4,10 @@ feature_engineering:
 
 model:
   type: 'sklearn' #sklearn, xgboost, lightgbm, catboost
-  name: 'Random Forest'
-  class: 'RandomForestClassifier'  # Explicit class name
+  name: 'Logistic Regression'
+  class: 'LogisticRegression'  # Explicit class name
   params:  # Parameters as a dictionary
-    n_estimators: 400
-    criterion: 'gini'
+    C: 1.0
+    max_iter: 1000
+    penalty: "l2"
+    weight: 'balanced'
