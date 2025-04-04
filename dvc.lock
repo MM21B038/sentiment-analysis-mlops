@@ -59,18 +59,22 @@ stages:
       hash: md5
       md5: a84c1b72ac315c963d1182bf207f88c3
       size: 64801308
+    - path: params.yaml
+      hash: md5
+      md5: d085c3503384930bbaa9845059f84bb1
+      size: 342
     - path: src/ml/train.py
       hash: md5
-      md5: e9d31e6ea2311ede6e578f94da6eeb69
-      size: 2545
+      md5: 64d8f49e84b476120538c76b85ac4bb2
+      size: 3860
     outs:
     - path: models/encoder.pkl
       hash: md5
-      md5: 4143fb07ab2eebeec507fbcd64b2262d
+      md5: 654aff16ea53f7644edc4f4fa3ccfde2
       size: 351
     - path: models/model.pkl
       hash: md5
-      md5: fed62fd9679f2bad9fd683038ed3fd71
-      size: 1117072
+      md5: b3f5ac48fb674f3709980361ce57efb7
+      size: 80995233
   promote_model:
     cmd: python src/ml/promote_model.py

@@ -13,7 +13,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.12.2"
+          python-version: "3.10.11"
 
       - name: Install Dependencies
         run: |
@@ -21,7 +21,6 @@ jobs:
 
       - name: Configure DVC
         run: |
-          dvc remote add myremote E:\manav\storage\dvc-storage
           dvc pull -r myremote
 
       - name: Run Pipeline

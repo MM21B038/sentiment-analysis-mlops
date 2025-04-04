@@ -29,6 +29,7 @@ stages:
     deps:
       - data/processed/features.csv
       - src/ml/train.py
+      - params.yaml
     outs:
       - models/model.pkl
       - models/encoder.pkl

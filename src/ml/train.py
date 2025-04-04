@@ -50,8 +50,9 @@ y = encoder.fit_transform(y)
 # Split into training and testing datasets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize XGBoost model
-model = config['model']['ModelWithParam']
+model_class = globals()[config['model']['class']]
+model_params = config['model']['params']
+model = model_class(**model_params)
 
 with mlflow.start_run(run_name = config['model']['type']):
     # Train the model
