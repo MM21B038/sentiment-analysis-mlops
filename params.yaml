@@ -5,8 +5,8 @@ feature_engineering:
 model:
   type: 'sklearn' #sklearn, xgboost, lightgbm, catboost
   name: 'Logistic Regression'
-  class: 'LogisticRegression'  # Explicit class name
+  class: 'XGBClassifier'  # Explicit class name
   params:  # Parameters as a dictionary
-    C: 1.0
-    max_iter: 1000
-    penalty: "l2"
+    eval_metric: "logloss"
+    n_estimators: 400
+    max_depth: 10
