@@ -3,8 +3,7 @@ from mlflow.tracking import MlflowClient
 import mlflow.exceptions
 
 MODEL_NAME = "YouTube_Comment_Sentiment_Analysis"
-client = MlflowClient("./mlruns")
-
+client = MlflowClient("http://127.0.0.1:5000")
 # Get latest trained model
 new_run = mlflow.search_runs(experiment_names=["Sentiment_Analysis"], order_by=["start_time desc"]).iloc[0]
 new_model_uri = f"runs:/{new_run.run_id}/xgboost_model"

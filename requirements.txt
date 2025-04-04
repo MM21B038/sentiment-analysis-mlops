@@ -1,14 +1,12 @@
-flask==2.0.3
-flask_cors==3.0.10
-emoji==2.11.1
-pandas==1.5.3  # Downgrade for compatibility
-numpy==1.24.4
-scikit-learn==1.2.2
-nltk==3.8.1
-dvc==3.50.2
-mlflow==2.11.3
-sentence-transformers==2.7.0
-xgboost==1.7.6
-lightgbm==3.3.5
-catboost==1.2.7
+flask
+flask_cors
+emoji
+pandas
+numpy
+scikit-learn
+nltk
+dvc
+mlflow
+sentence-transformers
+xgboost
 

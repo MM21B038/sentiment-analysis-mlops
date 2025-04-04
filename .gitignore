@@ -1,5 +1,4 @@
-# MLflow
-mlruns/
+./mlruns
 
 # DVC
 .dvc/cache

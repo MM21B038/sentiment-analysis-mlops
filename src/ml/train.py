@@ -1,7 +1,5 @@
 import pandas as pd
 from xgboost import XGBClassifier
-from lightgbm import LGBMClassifier
-from catboost import CatBoostClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, f1_score
 from sklearn.linear_model import LogisticRegression, RidgeClassifier, SGDClassifier
@@ -24,7 +22,7 @@ with open("params.yaml", "r") as f:
     config = yaml.safe_load(f)
 
 # Set MLflow tracking and experiment
-mlflow.set_tracking_uri("./mlruns")
+mlflow.set_tracking_uri("http://127.0.0.1:5000")
 mlflow.set_experiment("Sentiment_Analysis")
 
 # Define file paths
@@ -77,12 +75,8 @@ with mlflow.start_run(run_name = config['model']['type']):
     # Log the model using MLflow's XGBoost integration
     if config['model']['type'] == 'sklearn':
         mlflow.sklearn.log_model(model, config['model']['name'], signature=signature, input_example=X_test[:1])
-    elif config['model']['type'] == 'xgboost':
-        mlflow.xgboost.log_model(model, config['model']['name'], signature=signature, input_example=X_test[:1])
-    elif config['model']['type'] == 'lightgbm':
-        mlflow.lightgbm.log_model(model, config['model']['name'], signature=signature, input_example=X_test[:1])
     else:
-        mlflow.catboost.log_model(model, config['model']['name'], signature=signature, input_example=X_test[:1])
+        mlflow.xgboost.log_model(model, config['model']['name'], signature=signature, input_example=X_test[:1])
 
     # Save the model and label encoder locally for future use
     model_path = os.path.join(MODEL_DIR, "model.pkl")

@@ -5,7 +5,7 @@ from cleaning import CustomTextToVector
 import numpy as np
 import joblib
 
-mlflow.set_tracking_uri("./mlruns")
+mlflow.set_tracking_uri("http://127.0.0.1:5000")
 MODEL_NAME = "YouTube_Comment_Sentiment_Analysis"
 trans = CustomTextToVector()
 encoder = joblib.load("models/label_encoder.pkl")

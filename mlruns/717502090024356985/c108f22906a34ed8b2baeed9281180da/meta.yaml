@@ -1,0 +1,15 @@
+artifact_uri: file:///E:/manav/project/YouTube/youtube_comment_sentiment/mlruns/717502090024356985/c108f22906a34ed8b2baeed9281180da/artifacts
+end_time: 1743775792619
+entry_point_name: ''
+experiment_id: '717502090024356985'
+lifecycle_stage: active
+run_id: c108f22906a34ed8b2baeed9281180da
+run_name: sklearn
+run_uuid: c108f22906a34ed8b2baeed9281180da
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743775782606
+status: 3
+tags: []
+user_id: msrps

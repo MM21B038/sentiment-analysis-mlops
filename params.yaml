@@ -10,4 +10,3 @@ model:
     C: 1.0
     max_iter: 1000
     penalty: "l2"
-    weight: 'balanced'
