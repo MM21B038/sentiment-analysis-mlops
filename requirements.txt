@@ -9,4 +9,4 @@ dvc
 mlflow
 sentence-transformers
 xgboost
-
+chardet

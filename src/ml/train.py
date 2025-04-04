@@ -16,12 +16,19 @@ from sklearn.preprocessing import LabelEncoder
 import joblib
 import os
 import mlflow
+from mlflow.tracking import MlflowClient
 import yaml
-
+import sys
+import io
+if sys.stdout.encoding != 'UTF-8':
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8')
+    
 with open("params.yaml", "r") as f:
     config = yaml.safe_load(f)
 
 # Set MLflow tracking and experiment
+client = MlflowClient("http://127.0.0.1:5000")
 mlflow.set_tracking_uri("http://127.0.0.1:5000")
 mlflow.set_experiment("Sentiment_Analysis")
 
