@@ -8,5 +8,5 @@ model:
   class: 'XGBClassifier'  # Explicit class name
   params:  # Parameters as a dictionary
     eval_metric: "logloss"
-    n_estimators: 400
+    n_estimators: 200
     max_depth: 10
