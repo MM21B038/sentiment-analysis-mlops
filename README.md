@@ -38,44 +38,6 @@ This project performs sentiment analysis on YouTube comments using natural langu
 └── README.md              # Project documentation
 ```
 
-## Installation
-To set up the project locally, follow these steps:
-
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/MM21B038/sentiment-analysis-mlops.git
-   cd sentiment-analysis-mlops
-   ```
-
-2. Install dependencies:
-   ```sh
-   pip install -r requirements.txt
-   ```
-
-3. Install and initialize **DVC**:
-   ```sh
-   pip install dvc[all]
-   dvc init
-   dvc pull  # Fetch the latest dataset and models
-   ```
-
-## Running the Pipeline
-To execute the full pipeline:
-```sh
-dvc repro
-```
-This will:
-- Clean the raw data
-- Extract features using sentence transformers
-- Train an XGBoost model
-- Save the trained model and classification report
-
-## Running the API
-To start the FastAPI server for serving predictions:
-```sh
-uvicorn api.app:app --host 0.0.0.0 --port 8000
-```
-
 ## CI/CD Workflow
 - The **GitHub Actions CI/CD pipeline** is triggered on every `push` or `pull request` to the `main` branch.
 - It installs dependencies, pulls DVC data, runs the pipeline, and promotes the trained model.
