@@ -43,14 +43,12 @@ To set up the project locally, follow these steps:
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-repo/YouTube-Sentiment-Analysis.git
-   cd YouTube-Sentiment-Analysis
+   git clone https://github.com/MM21B038/sentiment-analysis-mlops.git
+   cd sentiment-analysis-mlops
    ```
 
-2. Create a virtual environment and install dependencies:
+2. Install dependencies:
    ```sh
-   python -m venv venv
-   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
    pip install -r requirements.txt
    ```
 
